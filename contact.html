@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Daniel Mwago</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
+    <style>
+        .under-construction {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .construction-content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .construction-svg {
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 40px;
+        }
+        
+        .back-home {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .back-home:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 255, 132, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Overlay -->
+    <div class="bg-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+        <div class="circle circle-5"></div>
+    </div>
+    
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.svg" alt="Daniel Mwago Logo">
+            </a>
+
+            <a href="#" class="menu-open hide-desktop">
+                <img src="assets/images/menu.svg" alt="Open menu">
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li class="hide-desktop menu-close-container">
+                    <a href="#" class="menu-close">
+                        <img src="assets/images/close.svg" alt="Close menu">
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>  
+        </nav>
+    </header>
+    
+    <main class="under-construction">
+        <div class="construction-content">
+            <img src="assets/images/construction.svg" alt="Under Construction" class="construction-svg">
+            <h1 style="color: var(--tertiary-color); margin-bottom: 16px; font-size: 2.5rem;">Contact Form Coming Soon</h1>
+            <p style="color: var(--tertiary-muted); margin-bottom: 30px; font-size: 1.1rem;">
+                I'm building a seamless way for us to connect. Stay tuned for the launch!
+            </p>
+            <a href="index.html" class="back-home">Back to Home</a>
+        </div>
+    </main>
+
+    <script>
+        const menu = document.querySelector('.nav-links');  
+        const menuBtn = document.querySelector('.menu-open');  
+        const closeBtn = document.querySelector('.menu-close');  
+
+        menuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            menu.classList.add('menu-opened');
+        })
+
+        closeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            menu.classList.remove('menu-opened');
+        })
+      
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-links a:not(.menu-close)').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('menu-opened');
+            });
+        });
+    </script>
+</body>
+</html>

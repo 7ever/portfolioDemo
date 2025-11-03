@@ -15,7 +15,6 @@
     --glass-border: rgba(255, 255, 255, 0.1);
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +66,6 @@ nav {
     height: 26px;
 }
 
-/* Desktop Navigation */
 .nav-links {
     display: flex;
     list-style: none;
@@ -88,7 +86,6 @@ nav {
     color: var(--secondary-color);
 }
 
-/* Mobile Navigation */
 .menu-open,
 .menu-close {
     cursor: pointer;
@@ -100,12 +97,10 @@ nav {
     display: none;
 }
 
-/* Hide hamburger by default (desktop view) */
 .hide-desktop {
     display: none;
 }
 
-/* Mobile menu styles */
 @media (max-width: 830px) {
     .hide-desktop {
         display: block;
@@ -163,7 +158,6 @@ nav {
     }
 }
 
-/* Main Section */
 main {
     display: flex;
     flex-direction: row;
@@ -248,7 +242,6 @@ main {
     box-shadow: 0 0 15px rgba(0, 255, 132, 0.2);
 }
 
-/* Avatar Section */
 .avatar-section {
     flex-shrink: 0;
     display: flex;
@@ -280,7 +273,6 @@ main {
     animation: pulse 4s ease-in-out infinite;
 }
 
-/* Background Circles */
 .bg-circles {
     position: fixed;
     inset: 0;
@@ -340,11 +332,44 @@ main {
     animation-delay: 3s;
 }
 
-/* =======================
-   MEDIA QUERIES
-======================= */
+.under-construction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-/* Tablets and below */
+.construction-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.construction-svg {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 40px;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.back-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 255, 132, 0.5);
+}
+
 @media (max-width: 1024px) {
     main {
         flex-direction: column-reverse;
@@ -366,7 +391,6 @@ main {
     }
 }
 
-/* Small tablets and large phones */
 @media (max-width: 768px) {
     .name,
     .title {
@@ -389,7 +413,6 @@ main {
     }
 }
 
-/* Mobile phones */
 @media (max-width: 480px) {
     header {
         width: calc(100% - 20px);
@@ -423,7 +446,6 @@ main {
     }
 }
 
-/* Desktop and above (reset hamburger & nav) */
 @media (min-width: 831px) {
     .hide-desktop {
         display: none;
@@ -434,7 +456,6 @@ main {
     }
 }
 
-/* Animations */
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-20px); }

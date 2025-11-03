@@ -1,0 +1,32 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        .gear { animation: rotate 10s linear infinite; transform-origin: center; }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    </style>
+    
+    <!-- Background -->
+    <rect width="400" height="300" fill="#0F0F0F"/>
+    
+    <!-- Construction elements -->
+    <g fill="#00FF84" opacity="0.8">
+        <!-- Gear 1 -->
+        <path class="gear" d="M120 150c0-16.57 13.43-30 30-30s30 13.43 30 30-13.43 30-30 30-30-13.43-30-30zm30-40c-22.09 0-40 17.91-40 40s17.91 40 40 40 40-17.91 40-40-17.91-40-40-40z" transform="translate(0,0)"/>
+        <path class="gear" d="M150 130v40M130 150h40M122 122l28 28M122 178l28-28" stroke="#00FF84" stroke-width="4"/>
+        
+        <!-- Gear 2 -->
+        <path class="gear" d="M280 150c0-16.57 13.43-30 30-30s30 13.43 30 30-13.43 30-30 30-30-13.43-30-30zm30-40c-22.09 0-40 17.91-40 40s17.91 40 40 40 40-17.91 40-40-17.91-40-40-40z" transform="translate(0,0)" style="animation-duration: 15s; animation-direction: reverse;"/>
+        <path class="gear" d="M310 130v40M290 150h40M282 122l28 28M282 178l28-28" stroke="#00FF84" stroke-width="4" style="animation-duration: 15s; animation-direction: reverse;"/>
+    </g>
+    
+    <!-- Construction bar -->
+    <rect x="80" y="200" width="240" height="20" rx="10" fill="#00FF84" opacity="0.3"/>
+    <rect x="80" y="200" width="180" height="20" rx="10" fill="#00FF84"/>
+    
+    <!-- Text -->
+    <text x="200" y="250" text-anchor="middle" fill="#FAFAFA" font-family="Poppins" font-size="24" font-weight="600">
+        Under Construction
+    </text>
+    <text x="200" y="280" text-anchor="middle" fill="#00FF84" font-family="Poppins" font-size="14" font-weight="400">
+        Coming Soon
+    </text>
+</svg>
