@@ -39,7 +39,6 @@ body {
     z-index: -4;
 }
 
-/* Header */
 header {
     position: fixed;
     top: 3%;
@@ -123,7 +122,7 @@ nav {
         justify-content: flex-start;
         align-items: flex-start;
         padding: 2em;
-        transform: translateX(100%);
+        transform: translateX(120%);
         transition: transform 0.3s ease-in-out;
         z-index: 999;
     }
@@ -253,12 +252,14 @@ main {
     position: relative;
     max-width: 420px;
     width: 100%;
+    
 }
 
 .avatar-image {
     width: 100%;
     height: auto;
     filter: drop-shadow(0px 5px 20px var(--secondary-color-shadow));
+    border-radius: 55%;
 }
 
 .avatar-glow {
@@ -270,7 +271,12 @@ main {
     border-radius: 50%;
     background: radial-gradient(circle, rgba(0, 255, 132, 0.2) 0%, rgba(0, 255, 132, 0) 70%);
     z-index: -1;
-    animation: pulse 4s ease-in-out infinite;
+    animation: pulse 2.8s ease-in-out infinite;
+    --s: 600px; /* adjust to control the size */
+    aspect-ratio: 1;
+    --g:/calc(var(--s)*0.312) calc(var(--s)*0.312) radial-gradient(50% 50%,#000 99%,#0000 101%) no-repeat;
+    mask: calc(50% + var(--s)*0.25) calc(50% + var(--s)*0.176) var(--g),calc(50% + var(--s)*-0.176) calc(50% + var(--s)*0.25) var(--g),calc(50% + var(--s)*-0.25) calc(50% + var(--s)*-0.176) var(--g),calc(50% + var(--s)*0.176) calc(50% + var(--s)*-0.25) var(--g),radial-gradient(calc(var(--s)*0.346),#000 99%,#0000 101%) subtract,calc(50% + var(--s)*0.076) calc(50% + var(--s)*0.435) var(--g),calc(50% + var(--s)*-0.435) calc(50% + var(--s)*0.076) var(--g),calc(50% + var(--s)*-0.076) calc(50% + var(--s)*-0.435) var(--g),calc(50% + var(--s)*0.435) calc(50% + var(--s)*-0.076) var(--g);
+    
 }
 
 .bg-circles {
