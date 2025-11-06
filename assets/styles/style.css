@@ -184,7 +184,7 @@ main {
 .title {
     font-weight: 700;
     font-size: 64px;
-    line-height: 72px;
+    line-height: 1.2;
 }
 
 .title {
@@ -192,6 +192,51 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 32px;
+}
+
+/* Text Animation Styles */
+.title-container {
+    overflow: hidden;
+    height: 80px; /* Increased to accommodate descenders */
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 1rem;
+}
+
+.title .container {
+    overflow: hidden;
+    display: inline-block;
+    height: 80px;
+    vertical-align: top;
+}
+
+.title .animation {
+    display: inline-block;
+    animation: text-animation 8s infinite;
+}
+
+.title .animation > div {
+    display: block;
+}
+
+.title .animation > div > div {
+    display: flex;
+    align-items: center;
+    height: 80px; /* Match container height */
+    line-height: 1;
+}
+
+@keyframes text-animation {
+    0% { margin-top: 0; }
+    10% { margin-top: 0; }
+    20% { margin-top: -80px; }
+    30% { margin-top: -80px; }
+    40% { margin-top: -160px; }
+    60% { margin-top: -160px; }
+    70% { margin-top: -80px; }
+    80% { margin-top: -80px; }
+    90% { margin-top: 0; }
+    100% { margin-top: 0; }
 }
 
 .text {
@@ -246,6 +291,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -10%;
 }
 
 .avatar-container {
@@ -401,7 +447,33 @@ main {
     .name,
     .title {
         font-size: 48px;
-        line-height: 56px;
+        line-height: 1.2;
+    }
+
+    /* Adjust animation container heights for tablet */
+    .title-container {
+        height: 62px;
+    }
+
+    .title .container {
+        height: 62px;
+    }
+
+    .title .animation > div > div {
+        height: 62px;
+    }
+
+    @keyframes text-animation {
+        0% { margin-top: 0; }
+        10% { margin-top: 0; }
+        20% { margin-top: -62px; }
+        30% { margin-top: -62px; }
+        40% { margin-top: -124px; }
+        60% { margin-top: -124px; }
+        70% { margin-top: -62px; }
+        80% { margin-top: -62px; }
+        90% { margin-top: 0; }
+        100% { margin-top: 0; }
     }
 
     .text {
@@ -416,6 +488,14 @@ main {
     .CTA1,
     .CTA2 {
         width: 200px;
+    }
+
+    /* --- FIX: Ensure centering is maintained --- */
+    .title .animation > div > div {
+        justify-content: center;
+    }
+    .title-container {
+        justify-content: center;
     }
 }
 
@@ -435,7 +515,33 @@ main {
     .name,
     .title {
         font-size: 36px;
-        line-height: 44px;
+        line-height: 1.2;
+    }
+
+    /* Adjust animation container heights for mobile */
+    .title-container {
+        height: 48px;
+    }
+
+    .title .container {
+        height: 48px;
+    }
+
+    .title .animation > div > div {
+        height: 48px;
+    }
+
+    @keyframes text-animation {
+        0% { margin-top: 0; }
+        10% { margin-top: 0; }
+        20% { margin-top: -48px; }
+        30% { margin-top: -48px; }
+        40% { margin-top: -96px; }
+        60% { margin-top: -96px; }
+        70% { margin-top: -48px; }
+        80% { margin-top: -48px; }
+        90% { margin-top: 0; }
+        100% { margin-top: 0; }
     }
     
     .greeting {
@@ -449,6 +555,14 @@ main {
     
     .nav-links {
         width: 80%;
+    }
+
+    /* --- FIX: Ensure centering is maintained --- */
+    .title .animation > div > div {
+        justify-content: center;
+    }
+    .title-container {
+        justify-content: center;
     }
 }
 
