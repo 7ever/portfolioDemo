@@ -6,11 +6,10 @@
     <title>Daniel Mwago - Designer & Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
 </head>
-
 <body>
     <!-- Background Overlay -->
     <div class="bg-circles">
@@ -20,18 +19,16 @@
         <div class="circle circle-4"></div>
         <div class="circle circle-5"></div>
     </div>
-    
+
     <!-- Header -->
     <header>
         <nav>
             <a href="#" class="logo">
                 <img src="assets/images/logo.svg" alt="Daniel Mwago Logo">
             </a>
-
             <a href="#" class="menu-open hide-desktop">
                 <img src="assets/images/menu.svg" alt="Open menu">
             </a>
-
             <ul class="nav-links" id="navLinks">
                 <li class="hide-desktop menu-close-container">
                     <a href="#" class="menu-close">
@@ -45,13 +42,25 @@
             </ul>  
         </nav>
     </header>
-    
+
     <!-- Main Content -->
     <main>
         <div class="hero-content">
             <p class="greeting">Hello, I'm</p>
             <h1 class="name">Daniel Mwago</h1>
-            <h1 class="title">Designer & Developer</h1>
+            <div class="title-container">
+                <h1 class="title">
+                    <span class="container">
+                        <span class="animation">
+                            <div>
+                                <div>Designer</div>
+                                <div>Developer</div>
+                                <div>Mentor</div>
+                            </div>
+                        </span>
+                    </span>
+                </h1>
+            </div>
             <p class="text">
                 Crafting exceptional digital experiences through innovative
                 UI/UX design, cutting-edge web development, and
@@ -93,6 +102,5 @@
             });
         });
     </script>
-
 </body>
 </html>
